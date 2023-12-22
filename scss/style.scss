@@ -1,0 +1,120 @@
+$title: #4c4f60;
+$paragraph: #c8c8cd;
+$background: #fafafa;
+$tarjet: #ffffff;
+$red-tarjet: #eb5454;
+$yellow-tarjet: #f7af52;
+$blue-tarjet: #549cef;
+$Navy_blue-tarjert: #f7af52;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 80%;
+  margin: 0 auto;
+  background-color: $background;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+  gap: 1rem;
+  text-align: center;
+  @extend .container;
+  .title {
+    font-size: 3.9rem;
+    color: $title;
+  }
+
+  .title__1 {
+    font-weight: 200;
+  }
+  .paragraph {
+    font-size: 1.8rem;
+    color: $paragraph;
+  }
+}
+
+.container__cards {
+  @extend .container;
+  gap: 3rem;
+  .title {
+    font-size: 2.5rem;
+    color: $title;
+    font-weight: 500;
+  }
+  .paragraph {
+    color: $paragraph;
+    font-size: 1.8rem;
+  }
+  .card__image {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .card {
+    width: 450px;
+    height: 270px;
+    display: flex;
+    gap: 1.4rem;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $tarjet;
+    padding: 2rem;
+    border-radius: 0.7rem;
+    -webkit-box-shadow: 6px 7px 5px 5px rgba(230, 71, 71, 0.45);
+    -moz-box-shadow: 6px 7px 5px 5px rgba(179, 179, 179, 0.45);
+    box-shadow: 6px 7px 5px 5px rgba(179, 179, 179, 0.45);
+  }
+  .cards__vertical {
+    @extend .container;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .card__1 {
+    border-top: 0.7rem solid $blue-tarjet;
+  }
+  .card__2 {
+    border-top: 0.7rem solid $red-tarjet;
+  }
+  .card__3 {
+    border-top: 0.7rem solid $yellow-tarjet;
+  }
+  .card__4 {
+    border-top: 0.7rem solid $Navy_blue-tarjert;
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    .title {
+      font-size: 2.5rem;
+    }
+    .paragraph {
+      font-size: 1.8rem;
+    }
+  }
+  .container__cards {
+    flex-direction: column;
+    .card {
+      width: 100%;
+    }
+  }
+}
